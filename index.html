@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="index.css">
+
+  <div class="container-video">
+    <div id="timer">00:00:000</div>
+    <div class="table-center">
+      <div>
+        <p id="p1">あなたの勝ちです!!!</p>
+        <p id="p2">残念。。。！</p>
+      </div>
+      <video id="video" preload="auto" autoplay="true" muted="muted" volume="0">
+      <source src="./movies/tired.mov">
+    </div>
+  </div>
+
+
+<!-- <p id="p1">テスト１</p> -->
+<input type="button" value="Win" onclick="clickBtn1()" />
+<input type="button" value="Lose" onclick="clickBtn2()" />
+<button id="start">開始</button>
+    <button id="stop">停止</button>
+    <button id="reset">クリア</button>
+    <script src="main.js"></script>
+
+<script>
+//初期表示は非表示
+document.getElementById("p1").style.display ="none";
+
+
+function clickBtn1(){
+	const p1 = document.getElementById("p1");
+
+	if(p1.style.display=="block"){
+		// noneで非表示
+		p1.style.display ="none";
+	}else{
+		// blockで表示
+		p1.style.display ="block";
+	}
+}
+</script>
+
+<script>
+  //初期表示は非表示
+  document.getElementById("p2").style.display ="none";
+  
+  function clickBtn2(){
+    const p1 = document.getElementById("p2");
+  
+    if(p2.style.display=="block"){
+      // noneで非表示
+      p2.style.display ="none";
+    }else{
+      // blockで表示
+      p2.style.display ="block";
+    }
+  }
+  </script>
+
