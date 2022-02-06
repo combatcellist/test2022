@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="index.css">　// ヘッダ部に入れるか、そのままroom.vueに挿入する sourceは"index.css" → "新しいindex.cssのパスに書き換える"
 
   <div class="container-video">
     <div id="timer">00:00:000</div>
@@ -7,8 +7,8 @@
         <p id="p1">あなたの勝ちです!!!</p>
         <p id="p2">残念。。。！</p>
       </div>
-      <video id="video" preload="auto" autoplay="true" muted="muted" volume="0">
-      <source src="./movies/tired.mov">
+      <video id="video" preload="auto" autoplay="true" muted="muted" volume="0"> // ここのvideoタグをroom.vueに記載されているビデオタグと差し替える
+      <source src="./movies/tired.mov"> // sourceは"./movies/tried.mov" → "新しい動画のパスに書き換える"
     </div>
   </div>
 
@@ -17,15 +17,16 @@
 <input type="button" value="Win" onclick="clickBtn1()" />
 <input type="button" value="Lose" onclick="clickBtn2()" />
 <button id="start">開始</button>
-    <button id="stop">停止</button>
-    <button id="reset">クリア</button>
-    <script src="main.js"></script>
+<button id="stop">停止</button>
+<button id="reset">クリア</button>
 
-<script>
+<script src="main.js"></script> // ここは不要になる
+
+<script> // このタグは不要になる
 //初期表示は非表示
-document.getElementById("p1").style.display ="none";
+document.getElementById("p1").style.display ="none"; // roome.vueの下の方に書く（mounted関数の中にこの処理を書く）
 
-
+// この関数はroom.vueの下の方に書く（methods関数の中に記載する）
 function clickBtn1(){
 	const p1 = document.getElementById("p1");
 
@@ -37,12 +38,14 @@ function clickBtn1(){
 		p1.style.display ="block";
 	}
 }
-</script>
 
-<script>
+</script> // このタグは不要になる
+
+<script> // このタグは不要になる
   //初期表示は非表示
-  document.getElementById("p2").style.display ="none";
+  document.getElementById("p2").style.display ="none"; // roome.vueの下の方に書く（mounted関数の中にこの処理を書く）
   
+  // この関数はroom.vueの下の方に書く（methods関数の中に記載する）
   function clickBtn2(){
     const p1 = document.getElementById("p2");
   
@@ -54,5 +57,5 @@ function clickBtn1(){
       p2.style.display ="block";
     }
   }
-  </script>
+</script> // このタグは不要になる
 
